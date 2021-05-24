@@ -15,7 +15,7 @@ Message to send: <input type="text" id="msg"/>
     var ws;
 
     function onLoad() {
-        ws = new WebSocket("ws://localhost:8080/"+$("#userId").val());
+        ws = new WebSocket("ws://localhost:8080/");
         ws.onmessage = function (e) {
             // alert(e.data)
             console.log(e)
