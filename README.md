@@ -1,0 +1,3 @@
+- /ws请求用页面发起，用来连接websocket，进行单个websocket的通信
+- /index用postman发起（http get），用来测试 
+- /receive用postman发起（http get），用来server端主动向浏览器群发消息
