@@ -6,16 +6,19 @@
 </head>
 <body>
 <body onload='onLoad();'>
+<p>【userId】：<div><input id="userId" name="userId" type="text" value="10"></div>
 Message to send: <input type="text" id="msg"/>
 <input type="button" onclick="sendMsg();" value="发送"/>
 </body>
 </body>
 
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script type="text/javascript">
     var ws;
 
     function onLoad() {
-        ws = new WebSocket("ws://localhost:8080/");
+        ws = new WebSocket("ws://localhost:8000/ws");
+        // ws = new WebSocket("ws://localhost:8080/tornado/" + $("#userId").val());
         ws.onmessage = function (e) {
             // alert(e.data)
             console.log(e)
